@@ -1,0 +1,149 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* tipografia mais moderna */
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #2b2b2b); /* fundo moderno em gradiente */
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(255, 198, 0);
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de elevação ao passar o mouse */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TÍTULO ===== */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+    border-bottom: solid 4px black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== SEÇÃO DE INPUT ===== */
+.input {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.input label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.input input {
+    flex: 1;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+/* efeito ao focar no input */
+.input input:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+}
+
+/* ===== BOTÃO ===== */
+button {
+    width: 300px;
+    height: 45px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: #000;
+    color: rgb(255, 198, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+
+/* efeito hover do botão */
+button:hover {
+    background: rgb(30, 30, 30);
+    transform: scale(1.05);
+}
+
+/* ===== ÁREA DE RESULTADO ===== */
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: #000;
+    color: rgb(255, 198, 0);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.result:hover {
+    transform: scale(1.03);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .input, button, .result {
+        width: 90%;
+    }
+}
